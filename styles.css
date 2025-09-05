@@ -24,9 +24,10 @@ body{
 }
 .flechas-boton {
   background: none; /* Remove default button background */
-  border: none; /* Remove default button border */
+  border-color: red rgb(0 255 0 / 1) blue;
   cursor: pointer;
   padding: 0px;
+  border-radius: 50%;
   width: 50px; /* Adjust size as needed */
   height: 50px; /* Adjust size as needed */
   position: relative;
@@ -54,7 +55,7 @@ body{
 
 /* Optional: Hover effect */
 .flechas-boton:hover::after {
-  border-color: blue; /* Change color on hover */
+  border-color: cyan; /* Change color on hover */
 }
 
 
