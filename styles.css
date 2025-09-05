@@ -4,13 +4,26 @@ body{
   height:100vh;
   overflow:hidden;
     }
+#botones{
+  position: absolute;
+	transform: rotate(90deg);
+	margin:0px;
+	width: 150px;
+  bottom: 60px;
+	height: 80px;
+  left: -20px;
+  padding: 1px;
+	text-align: center;
+  border: 2px solid red;
+	z-index: 9
+}
 .flechas-boton {
   background: none; /* Remove default button background */
   border: none; /* Remove default button border */
   cursor: pointer;
   padding: 0;
-  width: 30px; /* Adjust size as needed */
-  height: 30px; /* Adjust size as needed */
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
   position: relative;
   display: inline-block; /* Allows side-by-side display */
 }
@@ -40,5 +53,3 @@ body{
 .flechas-boton:hover::after {
   border-color: #007bff; /* Change color on hover */
 }
-
-
