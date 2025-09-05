@@ -14,10 +14,10 @@
 	<!-- Botones -->
 	<div class="flechas">
     <div id="iflecha">
-        <button class="flechas-boton flecha-izquierda"></button>
+        <button id="iboton" class="flechas-boton flecha-izquierda"></button>
       </div>
         <div id="dflecha">
-		<button class="flechas-boton flecha-derecha"></button>
+		<button id="dboton" class="flechas-boton flecha-derecha"></button>
       </div>
     </div>
 	<!-- Scene -->
@@ -40,9 +40,19 @@
 	</a-scene>
 </body>
 	<script>
+	const rightboton = document.getElementById("dboton");
+	const leftboton = document.getElementById("iboton");
+      
+		rightboton.addEventListener("click", function() {
+        alert("Button right clicked!");
+      });
 
+		leftboton.addEventListener("click", function() {
+        alert("Button left clicked!");
+      });
 	</script>
 </html>
+
 
 
 
