@@ -59,7 +59,6 @@ body{
 /* Optional: Hover effect */
 .flechas-boton:hover::after,hover::before {
   /*border-color: cyan; /* Change color on hover */
-  transition: border-color 0.5s ease;
   animation: animborde 0.5s 0.5s forwards;
 }
     @keyframes animborde {
@@ -70,7 +69,3 @@ body{
         border-color: #333333; /* Borde que se quita */
       }
     }
-
-
-
-
