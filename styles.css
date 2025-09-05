@@ -6,7 +6,7 @@ body{
     }
 .flechas{
   position: absolute;
-  top: 150px;
+  top: 0px;
   left: 0px;
   margin:0px;
   width:100%;
@@ -60,6 +60,7 @@ body{
 .flechas-boton:hover::after {
   border-color: cyan; /* Change color on hover */
 }
+
 
 
 
