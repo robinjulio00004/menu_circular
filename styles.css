@@ -6,16 +6,11 @@ body{
     }
 #botones{
   position: absolute;
-	transform: rotate(90deg);
-	margin:0px;
-	width: 150px;
-  bottom: 60px;
-	height: 80px;
-  left: -20px;
+  margin:0px;
   padding: 1px;
-	text-align: center;
+  text-align: center;
   border: 2px solid red;
-	z-index: 9
+  z-index: 9
 }
 .flechas-boton {
   background: none; /* Remove default button background */
@@ -53,3 +48,4 @@ body{
 .flechas-boton:hover::after {
   border-color: #007bff; /* Change color on hover */
 }
+
