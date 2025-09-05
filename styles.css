@@ -57,8 +57,9 @@ body{
 }
 
 /* Optional: Hover effect */
-.flechas-boton:hover::after {
+.flechas-boton:hover::before {
   border-color: cyan; /* Change color on hover */
   transition: border-color 0.5s ease; 
 }
+
 
