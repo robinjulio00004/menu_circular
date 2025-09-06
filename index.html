@@ -76,14 +76,14 @@
 			/*const rotcam=camera.getAttribute('rotation');*/
 			const rotcam=camera.object3D.rotation;
 			const radio=7.5;
-			var xpos,ypos,angulo=Math.PI / 2;
-			const rcam = 0; // Math.PI / 10
+			var xpos,ypos,angulo=1.5707;
+			var rcam = 0; // Math.PI / 10
       
 		rightboton.addEventListener("click", ()=> {
+		angulo += 0.7853;
 		xpos = radio * Math.cos(angulo);
     	zpos = radio * Math.sin(angulo);
-		rcam += Math.PI / 4;
-		angulo += Math.PI / 4;
+		rcam += 0.7853;
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.object3D.rotation.y = rcam;
 		document.getElementById("cx").textContent = xpos.toFixed(2);
@@ -92,10 +92,10 @@
       });
 
 		leftboton.addEventListener("click", ()=> {
+		angulo -= 0.7853;
 		xpos = radio * Math.cos(angulo);
     	zpos = radio * Math.sin(angulo);
-		rcam -= Math.PI / 4;
-		angulo -= Math.PI / 4;
+		rcam -= 0.7853;
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.object3D.rotation.y = rcam;
 		document.getElementById("cx").textContent = xpos.toFixed(2);
@@ -104,6 +104,7 @@
       });
 	</script>
 </html>
+
 
 
 
