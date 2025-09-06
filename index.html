@@ -79,7 +79,7 @@
 			var xpos,ypos,angulo=Math.PI / 2;
 			const rcam = 0; // Math.PI / 10
       
-		rightboton.addEventListener("click",function () {
+		rightboton.addEventListener("click", ()=> {
 		xpos = radio * Math.cos(angulo);
     	zpos = radio * Math.sin(angulo);
 		rcam += Math.PI / 4;
@@ -91,7 +91,7 @@
 		document.getElementById("roty").textContent = rotcam.y.toFixed(2);
       });
 
-		leftboton.addEventListener("click",function () {
+		leftboton.addEventListener("click", ()=> {
 		xpos = radio * Math.cos(angulo);
     	zpos = radio * Math.sin(angulo);
 		rcam -= Math.PI / 4;
@@ -104,6 +104,7 @@
       });
 	</script>
 </html>
+
 
 
 
