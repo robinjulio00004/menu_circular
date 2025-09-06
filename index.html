@@ -58,8 +58,8 @@
 			const camera=document.getElementById("cam");
 			const rightboton = document.getElementById("dboton");
 			const leftboton = document.getElementById("iboton");
-			const radio=7.5,rcam;
-			var xpos,ypos,angulo=0;
+			const radio=7.5;
+			var xpos,ypos,angulo=0,rcam;
 			rcam = Math.PI / 12; // 15 grados
       
 		rightboton.addEventListener("click", ()=> {
@@ -69,6 +69,7 @@
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.rotation.y -= rcam;
 		angulo -= 0.1745;
+			console.log("click right");
 			document.getElementById("cx").textContent = xpos;
 			document.getElementById("cy").textContent = ypos;
 			document.getElementById("roty").textContent = rcam;
@@ -81,12 +82,14 @@
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.rotation.y += rcam;
 		angulo += 0.1745;
+			console.log("left right");
 			document.getElementById("cx").textContent = xpos;
 			document.getElementById("cy").textContent = ypos;
 			document.getElementById("roty").textContent = rcam;
       });
 	</script>
 </html>
+
 
 
 
