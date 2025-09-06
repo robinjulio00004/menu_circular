@@ -31,31 +31,41 @@
   	</a-assets>
 		
 	<a-entity id="modelo1" gltf-model="#menu1" position="0 0 5" scale="1 1 1"
-	animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"></a-entity>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear"></a-entity>
 	<a-entity id="modelo2" gltf-model="#menu2" position="-2.5 0 4.3" scale="1 1 1"
-	animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"></a-entity>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear"></a-entity>
 	<a-entity id="modelo3" gltf-model="#menu3" position="2.5 0 4.3" scale="1 1 1"
-	animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"></a-entity>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear"></a-entity>
 	<a-circle position="0 0 0" rotation="-90 0 0"color="white" radius="5"></a-circle>
 		
 	<!-- Camera -->
-		<a-entity camera position="0 0.5 6.5"></a-entity>
+		<a-entity id="cam" camera position="0 0.5 7.5"></a-entity>
 		
 	</a-scene>
 </body>
 	<script>
-	const rightboton = document.getElementById("dboton");
-	const leftboton = document.getElementById("iboton");
+			const camera=document.getElementById("cam");
+			const rightboton = document.getElementById("dboton");
+			const leftboton = document.getElementById("iboton");
+			const radio=5;
+			var xpos,ypos,angulo=0;
       
 		rightboton.addEventListener("click", function() {
         console.log("Button right clicked!");
+		xpos = radio * Math.cos(angulo);
+    	ypos = radio * Math.sin(angulo);
+		camera.setAttribute('position', {x: xpos, y: ypos, z: 7.5});
       });
 
 		leftboton.addEventListener("click", function() {
         console.log("Button left clicked!");
+		xpos = radio * Math.cos(angulo);
+    	ypos = radio * Math.sin(angulo);
+		camera.setAttribute('position', {x: xpos, y: ypos, z: 7.5});
       });
 	</script>
 </html>
+
 
 
 
