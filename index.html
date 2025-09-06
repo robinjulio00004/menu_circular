@@ -49,24 +49,28 @@
 			const leftboton = document.getElementById("iboton");
 			const radio=5;
 			var xpos,ypos,angulo=0;
+		rcam = Math.PI / 12; // 15 grados
       
 		rightboton.addEventListener("click", function() {
         console.log("Button right clicked!");
 		xpos = radio * Math.cos(angulo);
-    	ypos = radio * Math.sin(angulo);
-		camera.setAttribute('position', {x: xpos, y: ypos, z: 7.5});
+    	zpos = radio * Math.sin(angulo);
+		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
+		camera.rotation.y -= rcam;
 		angulo -= 15;
       });
 
 		leftboton.addEventListener("click", function() {
         console.log("Button left clicked!");
 		xpos = radio * Math.cos(angulo);
-    	ypos = radio * Math.sin(angulo);
-		camera.setAttribute('position', {x: xpos, y: ypos, z: 7.5});
+    	zpos = radio * Math.sin(angulo);
+		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
+		camera.rotation.y += rcam;
 		angulo += 15;
       });
 	</script>
 </html>
+
 
 
 
