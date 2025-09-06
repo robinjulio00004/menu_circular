@@ -76,36 +76,35 @@
 			/*const rotcam=camera.getAttribute('rotation');*/
 			const rotcam=camera.object3D.rotation;
 			const radio=7.5;
-			var xpos,ypos,angulo=90;
+			var xpos,ypos,angulo=Math.PI / 2;
 			const rcam = 0; // Math.PI / 10
       
-		rightboton.addEventListener("click", ()=> {
-        console.log("Button right clicked!");
+		rightboton.addEventListener("click",function () {
 		xpos = radio * Math.cos(angulo);
     	zpos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.object3D.rotation.y += rcam;
-		angulo += 45;
+		angulo += Math.PI / 4;
 			console.log("click right");
 			document.getElementById("cx").textContent = xpos.toFixed(2);
 			document.getElementById("cy").textContent = zpos.toFixed(2);
 			document.getElementById("roty").textContent = rcam.y.toFixed(2);
       });
 
-		leftboton.addEventListener("click", ()=> {
-        console.log("Button left clicked!");
+		leftboton.addEventListener("click",function () {
 		xpos = radio * Math.cos(angulo);
     	zpos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.object3D.rotation.y -= rcam;
-		angulo -= 45;
+		angulo -= Math.PI / 4;
 			console.log("left right");
 			document.getElementById("cx").textContent = xpos.toFixed(2);
 			document.getElementById("cy").textContent = zpos.toFixed(2);
-			document.getElementById("roty").textContent = rcam.y.toFixed(2);
+			document.getElementById("roty").textContent = rotcam.y.toFixed(2);
       });
 	</script>
 </html>
+
 
 
 
