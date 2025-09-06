@@ -6,23 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-    	<script src="aframe-v1.6.0.min.js"></script>
-    	<script src="aframe-ar.js"></script>
-		<script src="orbit-controls.js"></script>
-		<link rel="stylesheet" href="styles.css">
+    <script src="aframe-v1.6.0.min.js"></script>
+    <script src="aframe-ar.js"></script>
+	<script src="orbit-controls.js"></script>
+	<link rel="stylesheet" href="styles.css">
 	</head>
 <body>
-	<div class="fmsg">
-	<div id="sistema">
-	<p>pos x: <span id="cx"></span></p>
-	</div>
- 	 <div>
-	<p>pos y: <span id="cy">&nbsp;</span></p>
-	 </div>
-	 <div>
-	<p>rotacion en y: <span id="roty"></span></p>
-	 </div>
-	</div>
 	<!-- Botones -->
 	<div class="flechas">
     <div id="iflecha">
@@ -47,33 +36,31 @@
   	</a-assets>
 		
 	<a-entity id="modelo1" gltf-model="#menu1" position="0 0 3" scale="1 1 1"
-	></a-entity>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
 	<a-entity id="modelo2" gltf-model="#menu2" position="0 0 -3" scale="1 1 1"
-	></a-entity>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
 	<a-entity id="modelo3" gltf-model="#menu3" position="2.6 0 0" scale="1 1 1"
-	></a-entity>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
 	<a-entity id="modelo4" gltf-model="#menu4" position="-2.6 0 0" scale="5 5 5"
-	></a-entity>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
 	<a-entity id="modelo5" gltf-model="#menu5" position="2 0 2" scale="0.5 0.5 0.5"
-	></a-entity>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
 	<a-entity id="modelo6" gltf-model="#menu6" position="2 0 -2" scale="0.3 0.3 0.3"
-	></a-entity>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
 	<a-entity id="modelo7" gltf-model="#menu7" position="-2 0 2" scale="1 1 1"
-	></a-entity>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
 	<a-entity id="modelo8" gltf-model="#menu8" position="-2 0 -2" scale="1 1 1"
-	animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear"></a-entity>
-	<a-circle position="0 0 0" rotation="-90 0 0"color="white" radius="3"></a-circle>
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
+	<!--<a-circle position="0 0 0" rotation="-90 0 0"color="white" radius="3"></a-circle>-->
 		
 	<!-- Camera -->
 		<a-entity id="cam" camera position="0 0.5 5.5"></a-entity>
-		
 	</a-scene>
 </body>
 	<script>
 			const camera=document.getElementById("cam");
 			const rightboton = document.getElementById("dboton");
 			const leftboton = document.getElementById("iboton");
-			const rotcam=camera.object3D.rotation;
 			const radio=5.5;
 			var xpos,ypos,angulo=1.5707,rcam=0;
       
@@ -84,9 +71,6 @@
     	zpos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.object3D.rotation.y = rcam;
-		document.getElementById("cx").textContent = xpos.toFixed(2);
-		document.getElementById("cy").textContent = zpos.toFixed(2);
-		document.getElementById("roty").textContent = rotcam.y.toFixed(2);
       });
 
 		leftboton.addEventListener("click", ()=> {
@@ -96,11 +80,9 @@
     	zpos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.object3D.rotation.y = rcam;
-		document.getElementById("cx").textContent = xpos.toFixed(2);
-		document.getElementById("cy").textContent = zpos.toFixed(2);
-		document.getElementById("roty").textContent = rotcam.y.toFixed(2);
       });
 	</script>
 </html>
+
 
 
