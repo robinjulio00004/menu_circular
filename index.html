@@ -55,6 +55,7 @@
 		xpos = radio * Math.cos(angulo);
     	ypos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: ypos, z: 7.5});
+		angulo -= 15;
       });
 
 		leftboton.addEventListener("click", function() {
@@ -62,9 +63,11 @@
 		xpos = radio * Math.cos(angulo);
     	ypos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: ypos, z: 7.5});
+		angulo += 15;
       });
 	</script>
 </html>
+
 
 
 
