@@ -35,9 +35,9 @@
 	<a-asset-item id="menu8" src="./menus_gltf/menu6_256.glb"></a-asset-item>
   	</a-assets>
 		
-	<a-entity id="modelo1" gltf-model="#menu1" position="0 0 3" scale="1 1 1"
+	<a-entity id="modelo1" gltf-model="#menu1" position="0 0 2.5" scale="1 1 1"
 	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
-	<a-entity id="modelo2" gltf-model="#menu2" position="0 0 -3" scale="1 1 1"
+	<a-entity id="modelo2" gltf-model="#menu2" position="0 0 -2.5" scale="1 1 1"
 	></a-entity>
 	<a-entity id="modelo3" gltf-model="#menu3" position="2.6 0 0" rotation="0 0 0" scale="1 1 1"
 	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
@@ -51,7 +51,7 @@
 	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
 	<a-entity id="modelo8" gltf-model="#menu8" position="-2 0 -2" rotation="0 -25 0" scale="0.3 0.3 0.3"
 	></a-entity>
-	<a-light type="directional" color="white" position="0 6 0" intensity="1"></a-light>
+	<a-light type="ambient" color="white" position="0 6 0"></a-light>
 	<!--<a-circle position="0 0 0" rotation="-90 0 0"color="white" radius="3"></a-circle>-->
 		
 	<!-- Camera -->
@@ -65,7 +65,6 @@
 			const radio=5.5;
 			var xpos,ypos,angulo=1.5707,rcam=0;
 		
-      	document.addEventListener('DOMContentLoaded', function() {
 		leftboton.addEventListener("click", ()=> {
 		angulo += 0.7853;
 		rcam -= 0.7853;
@@ -83,10 +82,5 @@
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.object3D.rotation.y = rcam;
       });
-	});
 	</script>
 </html>
-
-
-
-
