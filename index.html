@@ -85,10 +85,11 @@
 		camera.object3D.rotation.y += rcam;
 		angulo += 10;
 			console.log("left right");
-			document.getElementById("cx").textContent = xpos;
-			document.getElementById("cy").textContent = zpos;
-			document.getElementById("roty").textContent = rotcam.y;
+			document.getElementById("cx").textContent = xpos.toFixed(2);
+			document.getElementById("cy").textContent = zpos.toFixed(2);
+			document.getElementById("roty").textContent = rotcam.y.toFixed(2);
       });
 	</script>
 </html>
+
 
