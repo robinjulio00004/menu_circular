@@ -63,7 +63,8 @@
 			const leftboton = document.getElementById("iboton");
 			const radio=5.5;
 			var xpos,ypos,angulo=1.5707,rcam=0;
-      
+		
+      	document.addEventListener('DOMContentLoaded', function() {
 		rightboton.addEventListener("click", ()=> {
 		angulo += 0.7853;
 		rcam -= 0.7853;
@@ -81,8 +82,10 @@
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.object3D.rotation.y = rcam;
       });
+	});
 	</script>
 </html>
+
 
 
 
