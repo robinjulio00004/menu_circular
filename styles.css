@@ -25,47 +25,41 @@ body{
   transform: translate(-30%, 50%);
 }
 .flechas-boton {
-  background: none; /* Remove default button background */
+  background: none;
   border-color: red rgb(0 255 0 / 1) blue;
   cursor: pointer;
   padding: 0px;
   border-radius: 50%;
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
+  width: 50px;
+  height: 50px;
   transform: translate(0%, 50%);
   position: relative;
 }
-
 .flechas-boton::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  border: solid #333333; /* Arrow color */
-  border-width: 0 4px 4px 0; /* Adjust arrow thickness */
+  border: solid #333333;
+  border-width: 0 4px 4px 0;
   display: inline-block;
-  padding: 5px; /* Adjust arrow size */
+  padding: 5px;
 }
-
-/* Directional arrows */
 .flecha-derecha::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-
 .flecha-izquierda::after {
   transform: translate(-50%, -50%) rotate(135deg);
 }
-
-/* Optional: Hover effect */
 .flechas-boton:hover::after,hover::before {
-  /*border-color: cyan; /* Change color on hover */
+  border-color: cyan;
   animation: animborde 0.5s 0.5s forwards;
 }
-    @keyframes animborde {
-      0% {
-        border-color: cyan; /* Borde inicial */
-      }
-      100% {
-        border-color: #333333; /* Borde que se quita */
-      }
+@keyframes animborde {
+0% {
+  border-color: cyan;
+  }
+100% {
+  border-color: #333333;
     }
+  }
