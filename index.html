@@ -84,7 +84,7 @@
 		xpos = radio * Math.cos(angulo);
     	zpos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
-		camera.object3D.rotation.y -= rcam;
+		camera.object3D.rotation.y += rcam;
 		angulo += 45;
 			console.log("click right");
 			document.getElementById("cx").textContent = xpos.toFixed(2);
@@ -97,7 +97,7 @@
 		xpos = radio * Math.cos(angulo);
     	zpos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
-		camera.object3D.rotation.y += rcam;
+		camera.object3D.rotation.y -= rcam;
 		angulo -= 45;
 			console.log("left right");
 			document.getElementById("cx").textContent = xpos.toFixed(2);
@@ -106,6 +106,7 @@
       });
 	</script>
 </html>
+
 
 
 
