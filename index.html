@@ -12,6 +12,17 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
 <body>
+	<div class="fmsg">
+	<div id="sistema">
+	<p>pos x: <span id="cx"></span></p>
+	</div>
+ 	 <div>
+	<p>pos y: <span id="cy">&nbsp;</span></p>
+	 </div>
+	 <div>
+	<p>rotacion en y: <span id="roty"></span></p>
+	 </div>
+	</div>
 	<!-- Botones -->
 	<div class="flechas">
     <div id="iflecha">
@@ -51,25 +62,32 @@
 			var xpos,ypos,angulo=0;
 			rcam = Math.PI / 12; // 15 grados
       
-		rightboton.addEventListener("click", function() {
+		rightboton.addEventListener("click", ()=> {
         console.log("Button right clicked!");
 		xpos = radio * Math.cos(angulo);
     	zpos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.rotation.y -= rcam;
 		angulo -= 0.1745;
+			document.getElementById("cx").textContent = xpos;
+			document.getElementById("cy").textContent = ypos;
+			document.getElementById("roty").textContent = rcam;
       });
 
-		leftboton.addEventListener("click", function() {
+		leftboton.addEventListener("click", ()=> {
         console.log("Button left clicked!");
 		xpos = radio * Math.cos(angulo);
     	zpos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.rotation.y += rcam;
 		angulo += 0.1745;
+			document.getElementById("cx").textContent = xpos;
+			document.getElementById("cy").textContent = ypos;
+			document.getElementById("roty").textContent = rcam;
       });
 	</script>
 </html>
+
 
 
 
