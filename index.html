@@ -30,15 +30,16 @@
 	<a-asset-item id="menu3" src="./menus_gltf/menu3.glb"></a-asset-item>
   	</a-assets>
 		
-	<a-entity id="modelo1" gltf-model="#menu1" position="0 0 5" scale="1 1 1"></a-entity>
-	<a-entity id="modelo2" gltf-model="#menu2" position="-2.5 0 4.3" scale="1 1 1"></a-entity>
-	<a-entity id="modelo3" gltf-model="#menu3" position="2.5 0 4.3" scale="1 1 1"></a-entity>
+	<a-entity id="modelo1" gltf-model="#menu1" position="0 0 5" scale="1 1 1"
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"></a-entity>
+	<a-entity id="modelo2" gltf-model="#menu2" position="-2.5 0 4.3" scale="1 1 1"
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"></a-entity>
+	<a-entity id="modelo3" gltf-model="#menu3" position="2.5 0 4.3" scale="1 1 1"
+	animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"></a-entity>
 	<a-circle position="0 0 0" rotation="-90 0 0"color="white" radius="5"></a-circle>
 		
 	<!-- Camera -->
-	<a-entity camera look-controls="enabled: false" orbit-controls="target: 0 0.5 6.5; minDistance: 10; maxDistance: 10; rotateSpeed: 0.5; autoRotate:true;">
-        </a-entity>
-		<!--<a-entity camera position="0 0.5 6.5"></a-entity> initialPosition: 0 0 0-->
+		<a-entity camera position="0 0.5 6.5"></a-entity>
 		
 	</a-scene>
 </body>
@@ -55,6 +56,7 @@
       });
 	</script>
 </html>
+
 
 
 
