@@ -40,19 +40,19 @@
 	<a-entity id="modelo2" gltf-model="#menu2" position="0 0 -2.5" scale="1 1 1"
 	></a-entity>
 	<a-entity id="modelo3" gltf-model="#menu3" position="2.6 0 0" rotation="0 0 0" scale="1 1 1"
-	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
+	></a-entity>
 	<a-entity id="modelo4" gltf-model="#menu4" position="-2.6 0 0" scale="5 5 5"
 	></a-entity>
-	<a-entity id="modelo5" gltf-model="#menu5" position="2 0 2" scale="0.5 0.5 0.5"
+	<a-entity id="modelo5" gltf-model="#menu5" position="2 0 2" rotation="0 -25 0" scale="0.5 0.5 0.5"
 	></a-entity>
-	<a-entity id="modelo6" gltf-model="#menu6" position="2 0 -2" rotation="0 225 0" scale="0.3 0.3 0.3"
+	<a-entity id="modelo6" gltf-model="#menu6" position="1.8 0 -2.3" rotation="0 225 0" scale="0.3 0.3 0.3"
 	></a-entity>
 	<a-entity id="modelo7" gltf-model="#menu7" position="-2 0 2" scale="1 1 1"
-	animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
-	<a-entity id="modelo8" gltf-model="#menu8" position="-2 0 -2" rotation="0 -25 0" scale="0.3 0.3 0.3"
+	></a-entity>
+	<a-entity id="modelo8" gltf-model="#menu8" position="-2.3 0 -1.8" rotation="0 -25 0" scale="0.3 0.3 0.3"
 	></a-entity>
 	<!--<a-light type="ambient" color="white" position="0 6 0"></a-light>-->
-	<a-circle position="0 0 0" rotation="-90 0 0"color="white" radius="3" opacity="0.5"></a-circle>
+	<a-circle position="0 0 0" rotation="-90 0 0"color="white" radius="3" opacity="1" visible="false"></a-circle>
 		
 	<!-- Camera -->
 		<a-entity id="cam" camera position="0 0.8 5.5"></a-entity>
@@ -84,3 +84,4 @@
       });
 	</script>
 </html>
+
