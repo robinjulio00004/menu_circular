@@ -62,7 +62,7 @@
 			const rotcam=camera.object3D.rotation;
 			const radio=7.5;
 			var xpos,ypos,angulo=0;
-			const rcam = Math.PI / 10; // 10 grados
+			const rcam = 10; // Math.PI / 10
       
 		rightboton.addEventListener("click", ()=> {
         console.log("Button right clicked!");
@@ -70,7 +70,7 @@
     	zpos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.object3D.rotation.y -= rcam;
-		angulo -= 0.1745;
+		angulo -= 10;
 			console.log("click right");
 			document.getElementById("cx").textContent = xpos;
 			document.getElementById("cy").textContent = zpos;
@@ -83,7 +83,7 @@
     	zpos = radio * Math.sin(angulo);
 		camera.setAttribute('position', {x: xpos, y: 0.5, z: zpos});
 		camera.object3D.rotation.y += rcam;
-		angulo += 0.1745;
+		angulo += 10;
 			console.log("left right");
 			document.getElementById("cx").textContent = xpos;
 			document.getElementById("cy").textContent = zpos;
@@ -91,3 +91,4 @@
       });
 	</script>
 </html>
+
